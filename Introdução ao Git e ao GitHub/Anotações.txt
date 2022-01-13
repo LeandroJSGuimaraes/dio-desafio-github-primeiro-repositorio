@@ -1,0 +1,242 @@
+INTRODUÇÃO AO GIT E AO GITHUB
+
+Benefícios em se trabalhar com o GIT e o GITHUB:
+
+- Controle de versão
+- Armazenamento em nuvem
+- Trabalho em equipe
+- Melhorar seu código
+- Reconhecimento
+
+Comandos básicos para um bom desempenho no terminal
+
+A maioria dos sistemas operacionais possuem programas que possuem uma interface gráfica, ou seja, a forma que o usuário interage com esses programas é de forma gráfica, isto é, ele pode clicar, arrastar, selecionar, etc, tudo é responsivo, tudo responde aos comandos do usuário, sejam eles clicar e arrastar algo, selecionar caixas e usar atalhos do teclado.
+
+O GIT é um sistema de versionamento de código distribuído. Um software cujo design é voltado para outro tipo de programa, ele é um CLI (Command Line Interface).
+
+O que é um sistema distribuído? O conceito de sistema distribuído é de um sistema que possui componentes localizados em computadores interligados em rede e que se comunicam e coordenam suas ações através da troca de mensagens entre os componentes. É comum pensarmos em componentes como sendo apenas servidores e máquinas conectadas em rede, mas quando falamos de componentes podem ser componentes de hardware (servidores) ou de software (aplicações e serviços).
+
+Os componentes interligados em rede podem estar separados por qualquer distância. No mesmo edifício de uma empresa, na mesma cidade, mesmo estado, no mesmo país ou até em continentes diferentes.
+
+Exemplos de Sistemas Distribuídos
+Em nossos dias todas as aplicações são baseadas em redes de computadores. Nenhuma aplicação ou serviço funciona de forma isolada. As redes são projetadas de forma a suportar uma ampla gama de serviços e aplicações.
+
+São alguns exemplos de sistemas distribuídos:
+
+A internet é o maior exemplo de sistema distribuído
+Qualquer aplicação intranet
+Qualquer aplicação mobile
+Aplicações e serviços baseados na Computação em Nuvem
+
+A Internet em particular é um sistema distribuído muito grande. Ela conecta usuários através de sites e serviços, e-mail, transferência de arquivos, chat, etc. Os serviços estão localizados em máquinas dispersas que são interligadas por algum tipo de rede. Diferentes aplicações e serviços se comunicam através da rede, ele trocam mensagens através de um meio de comunicação comum. Estes meios de comunicação permitem que aplicações e serviços em plataformas diferentes consigam se comunicar e cooperar. Eles são chamados de protocolos.
+
+A Intranet é uma parte da Internet administrada separadamente por uma empresa. Uma intranet é composta de várias redes locais (LANs) interligadas por conexões de backbone. A configuração de rede de uma Intranet pode variar desde uma LAN em um único site até um conjunto de LANs interconectadas pertencentes às filiais de uma grande empresa, localizadas inclusive em países diferentes.
+
+Uma Intranet pode ser conectada à Internet através de um roteador que permite aos usuários da Intranet terem acesso a serviços da Internet, serviços que são providos de fora da empresa. Também é possível que os usuários de outras Intranets tenham acesso aos serviços que a Intranet oferece. A segurança é crucial pois não deve ser permitido que um usuário de uma empresa concorrente tenha acesso aos projetos e clientes de uma empresa, da mesma forma que um hospital pode não querer que informações dos seus pacientes sejam acessadas por empresas farmacêuticas. 
+
+Desta forma vemos que os sistemas distribuídos já são uma realidade, sendo importante conhecer os conceitos e arquiteturas de sistemas distribuídos.
+
+A Computação móvel também é um tipo de sistema distribuído que conecta diversos dispositivos tais como notebooks, PDA, smartphone, Tablet além de outros dispositivos que são incorporados em carros, geladeiras, máquinas de lavar, smartwatch, etc. Estes dispositivos acessam serviços através da Internet. Com o avanço das redes sem fio e da miniaturização do hardware temos componentes interligados por redes sem fio com alta portabilidade e capacidade de se conectar com redes em lugares diferentes.
+A computação móvel também é chamada computação nômade e permite a execução de tarefas de computação com alta mobilidade. Os recursos são acessados através da internet de qualquer lugar.
+
+Daqui pra frente vamos nos referir aos sistemas distribuídos como SD.
+
+Por que Sistemas Distribuídos?
+
+O compartilhamento de recursos é um bom motivo para os SD. Recursos podem ser compartilhados por diferentes servidores e consumidos por clientes. Serviços podem ser compartilhados através da internet, sendo encapsulados em objetos que podem ser acessados por outros objetos ou por aplicações cliente.
+
+O compartilhamento de recursos é a principal motivação para se construir sistemas distribuídos. O recurso pode ser um componente de hardware, um disco ou impressora, um software, um serviço, um arquivo e objetos de dados de todos os tipos, áudio, vídeo, etc.
+
+Os Desafios dos Sistemas Distribuídos.
+
+Os componentes de um sistema distribuídos são um grande desafio. Em sistemas centralizados isso não existe pois há um único componente que é o próprio sistema centralizado. Em SD é um pouco diferente pois temos diversos componentes espalhados, ou distribuídos por diferentes servidores, que podem ser heterogêneos, com diferentes sistemas operacionais, de diferentes fabricantes, com diferentes capacidades de processamento.
+Daí surgem diversos desafios na computação distribuída, entre os quais podemos citar:
+
+Segurança
+Escalabilidade
+Desempenho
+Comunicação entre os componentes
+Tolerância a falhas
+
+Todos estes aspectos devem ser considerados quando trabalhamos com sistemas distribuídos. Em outras palavras:
+
+Como podemos nos assegurar que somente os clientes válidos podem ter acesso aos serviços/componentes do sistema? (Segurança)
+Como podemos garantir que o sistema distribuído suportará aumento no número de usuários ou requisições? (Escalabilidade)
+Como podemos garantir um desempenho aceitável em um sistema distribuído, onde os componentes estão interligados por redes que nem sempre possuem a mesma velocidade e onde os componentes nem sempre tem a mesma capacidade de processamento, sem que surjam gargalos que comprometam o desempenho. (Desempenho)
+Como podemos garantir que todos os componentes possam se comunicar, considerando ambientes heterogêneos de rede, servidores, diferentes padrões de arquitetura e protocolos de comunicação? (CORBA, .net, RMI, SOAP, REST, etc.)
+Como podemos garantir a tolerância a falhas em um sistema com componentes distribuídos em servidores conectados a redes e ambientes? (Tolerância a falhas)
+
+A solução envolve não apenas projeto e arquitetura do software mas também infraestrutura na qual o software será executado.
+
+Consequências do uso de Sistemas Distribuídos
+Como em um SD os componentes estão dispersos geograficamente surgem consequências a respeito dessa característica:
+
+Concorrência - Como os processos são distribuídos pela rede a execução concorrente de programas é a norma. Um servidor executa um processo enquanto outro processo é executado em outra máquina sendo que ambos compartilham recursos como banco de dados, largura de banda de rede, discos, etc. A disputa por estes recursos compartilhados pelos processos que são executados concorrentemente é uma consequência dos SD e também um desafio a ser superado. A coordenação de processos em execução concorrente é uma das formas de tratar a concorrência.
+
+Inexistência de relógio global - Em um SD, os processos precisam cooperar de forma coordenada através da troca de mensagens. A coordenação considera compartilhamento do tempo em que os processos são executados. O problema é que existem limites para a precisão com a qual os servidores sincronizam os relógios em uma rede. O fuso horário é um fator complicador na sincronização dos processos.
+
+Falhas independentes - Em qualquer sistema existem falhas e nos SD não é diferente. Os projetistas devem considerar as consequências de cada falha. Falhas de rede, falhas de banco de dados, falhas de comunicação, falhas de todos os tipos acontecem.
+
+As falhas na rede são problemáticas pois elas resultam no isolamento dos componentes do SD que não podem mais se comunicar e trabalhar juntos. Lentidão na rede também pode afetar os processos em execução.
+
+A falha de um componente ou término de um processo em um componente nem sempre é percebida imediatamente pelos demais componentes.
+
+Para abrir o terminal: botão Windows, digitar CMD, selecionar prompt de comando.
+
+dir no Windows e ls no Linux/Mac = comando listar: para se situar dentro do sistema operacional, entender em qual local estamos, listando todos os arquivos e pastas ali existentes.
+
+cd  /   change directory, esse comando nos possibilita navegar entre as pastas e é o mesmo para todos os sistemas operacionais.
+
+cd  .. para voltar ao diretório anterior na navegação no Windows e Linux/Mac
+
+cls (clear scream) para limpar a tela no prompt do Windows e clear ou teclas CTRL + L no Linux/Mac
+
+A tecla “Tab” no Windows tem a função de autocompletar a palavra 
+
+mkdir (make directory) e o nome da pasta, para criar uma pasta. Válido para os dois sistemas.
+
+Após executar um comando e o terminal não retornar nenhuma mensagem, é sinal que o comando foi processado com sucesso.
+
+ls para listar arquivos em diretório ou pasta
+
+ls -a para listar arquivos ocultos em um diretório ou pasta
+
+echo para criar arquivos no terminal
+
+> é um redirecionador de fluxo
+
+Exemplo: dentro da pasta em que o arquivo será criado, digitar: echo + arquivo > arquivo.txt
+
+Para navegar entre os comandos que foram dados, basta teclar o botão seta ↑
+
+del + nome do arquivo para apagar um arquivo
+
+rmdir + nome do diretório para apagar um diretório
+
+Tópicos fundamentais para entender o funcionamento do Git
+
+SHA: a sigla significa Secure Hash Algorithm (Algoritmo de Hash Seguro), é um conjunto de funções criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
+
+A encriptação gera um conjunto de 40 caracteres identificadores de 40 dígitos que são únicos e servem como uma identificação. Qualquer alteração feita no arquivo gera um novo conjunto de 40 dígitos identificadores. Ao retornar o arquivo para o seu estado original, o número identificador volta a ser o número inicial.
+
+Podemos dizer que é uma forma curta de representar um arquivo.
+
+
+
+
+
+
+
+
+Utilizando o GIT Bash
+
+O Git Bash é um terminal extendido para otimizar o uso do Git.
+
+Podemos alterar o tema do GIT Bash: clicar na barra superior da janela do aplicativo, selecionar “options”, em “looks” escolher o tema desejado.
+
+Objetos internos do GIT
+
+BLOBS: contem metadados do GIT (tipo de objeto, tamanho do string, tamanho do arquivo, etc…). O BLOB não guarda o nome do arquivo, ele guarda o “sha1” (caracteres identificadores dele).
+
+TREES: armazenam BLOBS. Elas são responsáveis por montar toda a estrutura e são onde estão localizados os arquivos. Elas podem apontar para os BLOBS ou para outras TREES. Isso porque os diretórios dentro de um sistema operacional podem conter outros diretórios.
+
+
+
+
+
+
+
+
+
+
+As TREES tem seus próprios “SHA1”s que são alterados todas as vezes que qualquer informação for alterada nos BLOBS.
+
+COMMIT: é o objeto que vai juntar tudo, que vai dar sentido a alteração que você está fazendo. Ele aponta para uma “TREE”; ele aponta para um “parente”, ou seja, ele aponta para o último “COMMIT” realizado antes dele; ele aponta para o autor e aponta para uma mensagem também.
+
+No COMMIT pode ser escrita uma mensagem para explicar e dar significado aos arquivos localizados nas várias pastas. O COMMIT também leva o nome do autor, do criador do COMMIT.
+
+O COMMIT também tem um timestamp, um carimbo de tempo, isto é, nele consta a data e a hora em que o arquivo foi criado.
+
+Eles também possuem um “sha1”, possuem criptação (geração do hash de 40 caracteres, identificador dos seus metadados). Assim, o COMMIT traz a segurança de que ele representa exatamente o que se quis dizer com o código, uma vez que qualquer alteração irá gerar um novo “sha1”.
+
+Chaves SSH e Tokens
+
+Chave SSH: é uma forma de estabelecer uma conexão segura e encriptada entre duas máquinas, no caso, o usuário (máquina local) e o servidor do github. Essa conexão é estabelecida por meio de duas chaves, uma pública e uma privada. No momento em que a chave pública e colocada no github, ele vai passar a conhecer nossa máquina, reconhecendo sua assinatura.
+
+Iniciando o Git e criando um commit
+
+Quanto utilizamos o terminal, devemos sempre colocar o nome do programa na frente. Por isso todo comando do GIT recebe seu nome na frente: git add, gir commit, etc…
+
+git init cria um repositório do git
+
+O arquivo Markdown (.mt) é uma forma mais humana de se escrever um arquivo HTML (estrutura básica de qualquer página na web)
+
+O que é um arquivo do tipo Markdown? É um arquivo que usa caracteres especiais como # para formatar o texto.
+
+
+git add 
+
+
+Ciclo de vida dos arquivos no Git
+
+Tracked são os arquivos rastreados pelo Git e podem ser divididos em três estágios diferentes: unmodified (arquivos que ainda não foram modificados), modified (arquivos que sofreram alguma modificação) e staged (local onde se localizam os arquivos que estão se preparando para fazer parte de um commit).
+
+Untracked são os arquivos que ainda não foram rastreados pelo Git. 
+
+É um ciclo: ao ser criado, o arquivo é “unmodified”; ao ser modificado vai para “modified” e quando ele é adicionado a um commit, ele vai para staged. Após, descrever o commit, ele volta para o status unmodified, uma vez que foram finalizadas as alterações. 
+
+
+
+
+
+
+
+
+
+Repositórios: 
+
+As alterações efetuadas no arquivo localizado na máquina, não repercutem imediatamente no remote repository (Github).
+
+Os arquivos transitam entre o working directory e o staging area na medida que vamos adicionando novos arquivos a esse trabalho e modificando novos arquivos nesse repositório. Ao se fazer um commit o trabalho passa a integrar o local repository e pode-se fazer o upload do local repository para o remote repository:
+
+
+
+
+
+
+
+
+Quando você tenta empurrar (push) o código para o GitHub e o seu commit não representa o estado mais atual do repositório, o git irá pedir para fazer um pull e depois um push
+
+O local repository é composto por arquivos comitados. Somente arquivos comitados podem ser enviados para o remote repository.
+
+git status ajuda a monitorar o status dos arquivos. Ele diz se o arquivo está “untracked”, “modified”  ou “staged”, por exemplo.
+
+mv nome do arquivo.md ./pasta desejada/ para mover o arquivo para uma pasta específica.
+
+git add * adiciona todas os arquivos modificados no local repository para a staging area.
+
+git remote add origin link do repositório no github para subir os arquivos do local repository para o remote repository.
+
+git remote -v para listar as listas de repositórios remotos cadastrados. Para saber para onde o repositório está apontando.
+
+git push origin master para empurrar o repositório do local repository para o remote repository.
+
+Para baixar repositórios do github, temos as seguintes opções. No botão Code:
+
+1) Copy the link and clone it in Git Bash
+
+2) Open with Codespaces
+
+3) Open with GitHub Desktop
+
+4) Download ZIP
+
+Taking option 1, we must copy the link and acess Git Bash e digitamos the following comand: git clone and then paste the link
+
+
+
+
+
+copiamos o link e depois acessamos o Git Bash 
+
